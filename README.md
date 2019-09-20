@@ -37,12 +37,13 @@ $ npm run start_production_server (or yarn start_production_server)
 
 ### Usage
 
-The script has two url's (you can replace localhost with your domain if running it on server or virtual box)
-`http://localhost:3000/test` - To make sure the server is running
-`http://localhost:3000/ssr?url=THE_URL_TO_RENDER` - Will return server side rendered html of the url
-
 * Start the server (locally or on production)
 * Visit /ssr and add your url in the url param
+
+The script has two url's (you can replace localhost with your domain if running it on server or virtual box)
+
+* `http://localhost:3000/test` - To make sure the server is running
+* `http://localhost:3000/ssr?url=THE_URL_TO_RENDER` - Will return server side rendered html of the url
 
 ### Development
 
