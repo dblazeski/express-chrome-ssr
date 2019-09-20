@@ -1,5 +1,5 @@
 # express-chrome-ssr
-# Example server side rendering with puppeteer / headless chrome
+# Server side rendering with puppeteer / headless chrome
 
 This repo is meant to be an example of implementing nodejs, expressjs, and puppeteer for server side rendering using headless chrome.
 
