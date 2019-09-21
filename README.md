@@ -17,6 +17,13 @@ Open source projects:
 
 [Node.js 8+](https://nodejs.org/) is required to run.
 
+Install from github (not published on npm yet):
+```sh
+$ npm install https://github.com/dblazeski/express-chrome-ssr.git
+or
+$ yarn add https://github.com/dblazeski/express-chrome-ssr.git
+```
+
 Install the dependencies and devDependencies and start the server.
 
 ```sh
