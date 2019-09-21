@@ -1,6 +1,6 @@
 {
 	"name": "express-chrome-ssr",
-	"version": "1",
+	"version": "1.0.0",
 	"description": "Run SSR server with expressjs and headless chrome",
 	"main": "src/index.js",
 	"author": "Dejan Blazheski",
