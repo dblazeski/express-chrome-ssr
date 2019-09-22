@@ -1,14 +1,18 @@
 import express from 'express';
 import puppeteer from 'puppeteer';
+import commandLineArgs from 'command-line-args';
 
 // Routes
 import { test } from './functions/test.js'
 import { ssr } from './functions/ssr.js'
 
 const app = express();
-const port = process.env.PORT || 3000;
-let browserWSEndpoint = null;
 
+const params = commandLineArgs([
+	{ name: 'port', alias: 'p', type: Number },
+])
+
+const port = params.port || 3000;
 app.listen(port, () => console.log(`I listen on http://localhost:${port}`))
 
 app.use((req, res, next) => {
@@ -17,6 +21,8 @@ app.use((req, res, next) => {
 });
 
 app.get('/test', test);
+
+let browserWSEndpoint = null;
 app.get('/ssr', async (req, res, next) => {
 
 	const { url } = req.query;
@@ -28,8 +34,7 @@ app.get('/ssr', async (req, res, next) => {
 	// console.time(`URL_START:${url}`)
 	// console.log(`browserWSEndpoint is::${(browserWSEndpoint)}`)
 	// Spin new instance if we dont have an active one
-	if (!browserWSEndpoint)
-	{
+	if (!browserWSEndpoint) {
 		const browser = await puppeteer.launch();
 		browserWSEndpoint = await browser.wsEndpoint();
 	}

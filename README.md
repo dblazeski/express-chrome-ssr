@@ -44,6 +44,10 @@ $ npm run start_production_server (or yarn start_production_server)
 
 ### Usage
 
+Specifying a port is optional, the default one is 3000
+```sh
+$ yarn start_production_server --port=3000
+```
 * Start the server (locally or on production)
 * Visit /ssr and add your url in the url param
 

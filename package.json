@@ -10,11 +10,12 @@
 		"dev": "nodemon --exec babel-node ./src/index.js",
 		"build": "NODE_ENV=production babel ./src --out-dir dist",
 		"server": "babel-node ./src/index.js",
-		"start_production_server": "pm2 start npm -- run server",
+		"start_production_server": "pm2 start npm -- run server --",
 		"kill_production_server": "pm2 kill"
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.6.0",
+		"command-line-args": "^5.1.1",
 		"express": "^4.17.1",
 		"pm2": "^3.5.1",
 		"puppeteer": "^1.20.0"
