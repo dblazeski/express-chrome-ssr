@@ -9,9 +9,10 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "nodemon --exec babel-node ./src/index.js",
 		"build": "NODE_ENV=production babel ./src --out-dir dist",
-		"server": "babel-node ./src/index.js",
-		"start_production_server": "pm2 start npm -- run server --",
-		"kill_production_server": "pm2 kill"
+		"server": "node ./dist/index.js",
+		"start_production_server": "pm2 start ./dist/index.js -i 2",
+		"kill_production_server": "pm2 kill",
+		"restart": "pm2 restart all"
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.6.0",
